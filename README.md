@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# To run the development server
 
-## Getting Started
-
-First, run the development server:
-
-```bash
+```
 npm run dev
-# or
+
+pnpm run dev
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Folder structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src
+|
++-- app               # application layer containing:
+|   |                 # this folder might differ based on the meta framework used
+|   +-- routes        # application routes / can also be pages
+|   +-- app.tsx       # main application component
+|   +-- provider.tsx  # application provider that wraps the entire application with different global providers - this might also differ based on meta framework used
+|   +-- router.tsx    # application router configuration
++-- assets            # assets folder can contain all the static files such as images, fonts, etc.
+|
++-- components        # shared components used across the entire application
+|
++-- config            # global configurations, exported env variables etc.
+|
++-- features          # feature based modules
+|
++-- hooks             # shared hooks used across the entire application
+|
++-- lib               # reusable libraries preconfigured for the application
+|
++-- stores            # global state stores
+|
++-- test              # test utilities and mocks
+|
++-- types             # shared types used across the application
+|
++-- utils             # shared utility functions
+```
 
-## Learn More
+# Prettier 
 
-To learn more about Next.js, take a look at the following resources:
+trivago configuration -  https://github.com/trivago/prettier-plugin-sort-imports
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+tailwindcss configuration - https://tailwindcss.com/blog/automatic-class-sorting-with-prettier
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# File naming convention
 
-## Deploy on Vercel
+only KEBAB_CASE - https://github.com/alan2207/bulletproof-react/blob/master/docs/project-standards.md#file-naming-conventions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Typed routes
+
+https://nextjs.org/docs/app/api-reference/next-config-js/typedRoutes
+
+# Libraries
+
+react icons - https://react-icons.github.io/react-icons/
+
+framer motion - https://www.framer.com/motion/
+
+zod - https://zod.dev/
+
+zustand - https://zustand.docs.pmnd.rs/getting-started/introduction
+
